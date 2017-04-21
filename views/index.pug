@@ -11,7 +11,7 @@ head
 body
   #App
   - src = process.env.NODE_ENV === 'production' ? 'dist/bundle.js' : 'http://localhost:8080/dist/bundle.js'
-  scrip(src="/public/jquery/dist/jquery.js")
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js')
+  script(src="/public/jquery/dist/jquery.js")
+  script(src="/public/bootstrap-jquery/dist/js/bootstrap.js")
   script(src=src)
   
