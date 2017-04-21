@@ -1,13 +1,10 @@
-$color: blue;
-$magic: 20px;
+$bgcolor: #5EF38C;
+$fntcolor: #534B52;
+$fontSize: 20px;
 
 
 body {
-  font-size: $magic;
-  color: black;
-  background-color: $color;
-}
-
-div {
-  color: black;
+  font-size: $fontSize;
+  color: $fntcolor;
+  background-color: $bgcolor;
 }

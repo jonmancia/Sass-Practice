@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
@@ -15,9 +16,16 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                     }
+            },
+            {
+                test: /\.css$/,
+                use: extractPlugin.extract({
+                    use: ['css-loader']
+                })
             },
             {
                 test: /\.scss$/,
@@ -28,7 +36,9 @@ module.exports = {
         ]
     },
     plugins: [
-        extractPlugin
+        extractPlugin, 
+        new webpack.ProvidePlugin({jQuery: 'jquery', $: 'jquery', "windows.jQuery": "jquery"})
     ],
+    
     devtool: 'source-map'
 }
