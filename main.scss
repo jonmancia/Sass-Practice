@@ -1,4 +1,5 @@
-$bgcolor: #5EF38C;
+$bgcolor: #89C4F4;
+$brand: #3A539B;
 $fntcolor: #534B52;
 $fontSize: 20px;
 
@@ -7,4 +8,8 @@ body {
   font-size: $fontSize;
   color: $fntcolor;
   background-color: $bgcolor;
+}
+
+.ar-title {
+  color: $brand;
 }
